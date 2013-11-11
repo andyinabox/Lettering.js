@@ -10,7 +10,15 @@
 *
 * Date: Mon Sep 20 17:14:00 2010 -0600
 */
-(function(){
+(function (root, factory) {
+	// use AMD define if available
+    if (typeof define === 'function' && define.amd) {
+        define(factory);
+    // otherwise assign to the global namespace
+    } else {
+        root.lettering = factory();
+    }
+}(this, function () {
 	function injector(t, splitter, klass, after) {
 	    //Find a cross browser innerText
 	    if (typeof t.textContent != 'undefined') {
@@ -58,7 +66,7 @@
 		}
 	};
 
-	lettering = function( el, method ) {
+	var lettering = function( el, method ) {
 	    if (el == null) {
 	        return;
 	    }
@@ -73,4 +81,6 @@
 		}
 	};
 
-})();
+    // return our main method 
+    return lettering;
+}));
