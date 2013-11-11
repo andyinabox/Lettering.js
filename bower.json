@@ -3,7 +3,7 @@
   "version": "0.6.3",
   "authors": [
     "Josh Emerson",
-    "Hani Sharabash <hanibash@gmail.com>",
+    "Hani Sharabash <hanibash@gmail.com>"
   ],
   "description": "Non-Jquery version of lettering.js",
   "main": "lettering.js",
